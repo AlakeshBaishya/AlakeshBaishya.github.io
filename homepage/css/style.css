@@ -43,7 +43,7 @@ a:hover {
    ===================== */
 .hero {
     position: relative;
-    height: 700px;
+    height: 900px;
     background-image: url('../images/jigi.jpg');
     background-size: 100% 100%;  /* Stretch to fill */
     background-repeat: no-repeat;
