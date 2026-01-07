@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebook | Alakesh Baishya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Homepage</a></li>
+                <li><a href="aboutme.html">About me</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="teaching.html">Teaching</a></li>
+                <li><a href="activities.html">Scientific Activities</a></li>
+                <li><a href="notebook.html" class="active">Notebook</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="profile-card">
+                <img src="images/Alakesh_photo.jpg" alt="Alakesh Baishya" class="profile-photo">
+                
+                <h1 class="profile-name">Alakesh Baishya</h1>
+                <p class="profile-title">PhD Student</p>
+                <p class="profile-title">Department of Physics</p>
+                <p class="profile-institution">University Name, Country</p>
+                
+                <div class="profile-links">
+                    <a href="mailto:your.email@university.edu">📧 Email</a>
+                    <a href="#" target="_blank">🎓 Google Scholar</a>
+                    <a href="#" target="_blank">📄 arXiv</a>
+                    <a href="#" target="_blank">🔗 ORCID</a>
+                    <a href="https://github.com/AlakeshBaishya" target="_blank">💻 GitHub</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Content -->
+        <main class="content">
+            <h1 class="page-title">Notebook</h1>
+            
+            <p style="margin-bottom: 2rem;">
+                A collection of notes, tutorials, and resources I've found useful during my research.
+            </p>
+
+            <!-- Notes Section -->
+            <div class="section">
+                <h2 class="section-title">Research Notes</h2>
+                
+                <div class="notebook-item">
+                    <div class="notebook-title"><a href="#">Introduction to Matrix Product States</a></div>
+                    <div class="notebook-date">December 2025</div>
+                    <div class="notebook-desc">A beginner-friendly introduction to MPS and tensor network notation.</div>
+                </div>
+
+                <div class="notebook-item">
+                    <div class="notebook-title"><a href="#">DMRG Algorithm Explained</a></div>
+                    <div class="notebook-date">November 2025</div>
+                    <div class="notebook-desc">Step-by-step explanation of the Density Matrix Renormalization Group algorithm.</div>
+                </div>
+
+                <div class="notebook-item">
+                    <div class="notebook-title"><a href="#">Quantum Simulation with Qiskit</a></div>
+                    <div class="notebook-date">October 2025</div>
+                    <div class="notebook-desc">Getting started with quantum simulation using IBM's Qiskit framework.</div>
+                </div>
+            </div>
+
+            <!-- Tutorials Section -->
+            <div class="section">
+                <h2 class="section-title">Tutorials</h2>
+                
+                <div class="notebook-item">
+                    <div class="notebook-title"><a href="#">Python for Physicists</a></div>
+                    <div class="notebook-date">September 2025</div>
+                    <div class="notebook-desc">Basic Python programming concepts for physics applications.</div>
+                </div>
+
+                <div class="notebook-item">
+                    <div class="notebook-title"><a href="#">LaTeX Tips for Scientific Writing</a></div>
+                    <div class="notebook-date">August 2025</div>
+                    <div class="notebook-desc">Useful LaTeX commands and packages for writing physics papers.</div>
+                </div>
+            </div>
+
+            <!-- Resources Section -->
+            <div class="section">
+                <h2 class="section-title">Useful Resources</h2>
+                <ul class="styled-list">
+                    <li><a href="#">Tensor Network</a> — Community resource for tensor networks</li>
+                    <li><a href="#">arXiv Quantum Physics</a> — Latest preprints in quantum physics</li>
+                    <li><a href="#">Qiskit Textbook</a> — Learn quantum computing with Qiskit</li>
+                    <li><a href="#">ITensor</a> — Tensor network library</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        © 2026 Alakesh Baishya. All rights reserved.
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

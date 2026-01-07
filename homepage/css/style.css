@@ -1,0 +1,506 @@
+/* =====================
+   CSS Variables
+   ===================== */
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #c0392b;
+    --text-color: #333;
+    --light-bg: #f9f9f9;
+    --white: #ffffff;
+    --border-color: #e0e0e0;
+    --gray: #666;
+    --light-gray: #888;
+}
+
+/* =====================
+   Reset & Base
+   ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--text-color);
+    line-height: 1.7;
+    background: var(--light-bg);
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+/* =====================
+   Hero Banner
+   ===================== */
+.hero {
+    position: relative;
+    height: 500px;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero-title {
+    font-family: 'Crimson Text', serif;
+    font-size: 3rem;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.quote-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.quote-text {
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #f0f0f0;
+}
+
+.quote-author {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #ccc;
+    text-align: right;
+}
+
+/* =====================
+   Navigation
+   ===================== */
+.navbar {
+    background: var(--primary-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-links a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+    padding: 0.5rem;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: white;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* =====================
+   Main Layout
+   ===================== */
+.main-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 3rem;
+}
+
+/* =====================
+   Sidebar
+   ===================== */
+.sidebar {
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.profile-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.profile-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--border-color);
+    margin: 0 auto 1.5rem;
+}
+
+.profile-initials {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid var(--border-color);
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3.5rem;
+    font-family: 'Crimson Text', serif;
+}
+
+.profile-name {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.profile-title {
+    color: var(--gray);
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+}
+
+.profile-institution {
+    color: var(--light-gray);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.profile-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.profile-links a {
+    font-size: 0.9rem;
+}
+
+/* =====================
+   Content Area
+   ===================== */
+.content {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 2.5rem;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.page-title {
+    font-family: 'Crimson Text', serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.section {
+    margin-bottom: 2rem;
+}
+
+.section:last-child {
+    margin-bottom: 0;
+}
+
+.section-title {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* =====================
+   Quote Box
+   ===================== */
+.quote-box {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+    border-left: 4px solid var(--accent-color);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    font-family: 'Crimson Text', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.quote-box .quote-author {
+    font-style: normal;
+    font-size: 0.95rem;
+    color: #777;
+    margin-top: 0.5rem;
+}
+
+/* =====================
+   Lists
+   ===================== */
+.styled-list {
+    list-style: none;
+}
+
+.styled-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.styled-list li::before {
+    content: "▸";
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+}
+
+/* =====================
+   Publications
+   ===================== */
+.publication {
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.publication:last-child {
+    border-bottom: none;
+}
+
+.pub-title {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.3rem;
+}
+
+.pub-authors {
+    font-size: 0.95rem;
+    color: var(--gray);
+    margin-bottom: 0.3rem;
+}
+
+.pub-venue {
+    font-size: 0.9rem;
+    color: var(--light-gray);
+    font-style: italic;
+}
+
+.pub-links {
+    margin-top: 0.5rem;
+}
+
+.pub-links a {
+    font-size: 0.85rem;
+    margin-right: 1rem;
+}
+
+.pub-links a:hover {
+    text-decoration: underline;
+}
+
+/* =====================
+   News Items
+   ===================== */
+.news-item {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    gap: 1rem;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-date {
+    color: var(--accent-color);
+    font-weight: 600;
+    font-size: 0.85rem;
+    min-width: 90px;
+}
+
+/* =====================
+   Contact Info
+   ===================== */
+.contact-info p {
+    margin-bottom: 0.8rem;
+}
+
+.contact-info strong {
+    color: var(--primary-color);
+}
+
+/* =====================
+   Notebook Items
+   ===================== */
+.notebook-item {
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.notebook-item:last-child {
+    border-bottom: none;
+}
+
+.notebook-title {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.3rem;
+}
+
+.notebook-date {
+    font-size: 0.85rem;
+    color: var(--light-gray);
+    margin-bottom: 0.5rem;
+}
+
+.notebook-desc {
+    font-size: 0.95rem;
+    color: var(--gray);
+}
+
+/* =====================
+   Activities
+   ===================== */
+.activity-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-title {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.activity-details {
+    font-size: 0.95rem;
+    color: var(--gray);
+    margin-top: 0.3rem;
+}
+
+/* =====================
+   Footer
+   ===================== */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--light-gray);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 2rem;
+    background: var(--primary-color);
+    color: rgba(255,255,255,0.8);
+}
+
+footer a {
+    color: rgba(255,255,255,0.9);
+}
+
+/* =====================
+   Responsive Design
+   ===================== */
+@media (max-width: 900px) {
+    .hero {
+        height: 400px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .quote-text {
+        font-size: 1rem;
+    }
+
+    .main-container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        position: relative;
+        top: 0;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--primary-color);
+        flex-direction: column;
+        padding: 1rem 2rem;
+        gap: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .content {
+        padding: 1.5rem;
+    }
+}
