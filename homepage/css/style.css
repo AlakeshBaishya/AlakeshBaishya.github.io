@@ -46,7 +46,7 @@ a:hover {
     height: 500px;
     background-image: url('../images/jigi.jpg');
     background-size: 30%;
-    background-position: center;
+    background-position: center bottom;
     background-attachment: fixed;
     display: flex;
     align-items: center;
