@@ -45,13 +45,13 @@ a:hover {
     position: relative;
     height: 500px;
     background-image: url('../images/jigi.jpg');
-    background-size: cover;
+    background-size: 80%;
     background-position: center;
     background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 .hero-overlay {
